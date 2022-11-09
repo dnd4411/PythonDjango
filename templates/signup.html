@@ -1,0 +1,44 @@
+{% extends 'index.html' %} {% load static %} {% block content %} {% if otp %}
+<div>
+  <form action="{% url 'signin' %}" method="post">
+    {% csrf_token %}
+
+    <div class="input-group mb-3">
+      <h1>Verify Your Email</h1>
+      <span class="input-group-text" id="basic-addon1">OTP</span>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="enter your otp"
+        aria-label="OTP"
+        aria-describedby="basic-addon1"
+        name="e_otp"
+      />
+      <input
+        type="hidden"
+        name="usr"
+        style="display: none"
+        value="{{usr.email}}"
+      />
+    </div>
+    <br />
+    <br />
+    <button type="submit">verify</button>
+    <a href="">resend otp</a>
+  </form>
+</div>
+
+{% else %}
+
+<div id="sign-up">
+  <h2>Enter your details</h2>
+  <form href="/signup/login/" method="post">
+    {% csrf_token %} {{form.name.label}} {{form.name}} {{form.username.label}}
+    {{form.username}} {{form.password1.label}} {{form.password1}}
+    {{form.password2.label}} {{form.password2}}
+    <br />
+    <br />
+    <button type="submit">signup</button>
+  </form>
+</div>
+{%endif%} {% endblock %}

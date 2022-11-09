@@ -1,0 +1,39 @@
+
+#home{
+    background-image: url("006.webp");
+    height: 400px;
+    text-align: left;
+    color: rgb(222, 233, 243);
+    /* background-color: aqua;*/
+} 
+  
+#ad{
+    
+    height: 500px;
+    /* background-color: aqua;*/
+} 
+
+#search{
+
+    margin-left: 250px;
+    padding-right:350px ;
+}
+#jambo{
+    padding: 50px;
+}
+
+#cd{
+    height:200px;
+  
+}
+#img2{
+    height: 750;
+   
+}
+#H{
+    text-align: center;
+}
+
+#all-card{
+    padding: 35px;
+}

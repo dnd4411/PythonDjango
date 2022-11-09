@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %} Search Results {% endblock title %}
+
+{% load static %}
+{% block content %}
+    <!-- <====================Search=========================================> -->
+    <div class="container" id="search">
+      <form method="get" action="/search" class="form-inline m-5">
+        <div class="input-group m-3">
+            <input type="text" name="search" class="form-control" placeholder=" Technology.. job.." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append"  id>
+              <button class="btn btn-success" type="submit">Saerch</button>
+            </div>
+          </div>
+      </form>
+    </div>
+
+    <!-- <============================jambotrnc=================================> -->
+    <div class="jumbotron  my-4 mx-5 " id="home" >
+      <div id="jambo">
+        <h1 class="display-4">24/7 COURSE HELP</h1>
+        <p class="lead">
+          <p>I'm not perfect; I make mistakes all the time.</p> 
+          <p>All I can do is to try my best to learn from my mistakes, </p>
+          <p>take responsibility for them, and do a better job tomorrow.</p>
+        </p>
+        <hr class="my-4" />
+        <p>
+         <h2>For more info</h2>
+        </p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="{% url 'jobseeker'%}" role="button">Learn more</a>
+        </p>
+      </div>
+     
+    </div> 
+    <!-- <=============================================================> -->
+  
+             
+    <!-- ==============================  ================================================================= -->
+    <h1 class="my-4 mx-4" id="H">Here for every moment</h1>
+    <div class="row row-cols-1 row-cols-md-4 g-4" id="all-card" >
+      <div class="col">
+        <div class="card">
+          <img src="{% static '002.webp' %}"class="card-img-top" alt="..."  id="cd" >
+          <div class="card-body">
+            <h5 class="card-title">Training </h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <a href="{% url 'jobseeker'%}">for more info</a>
+        </div>
+      </div>
+      <div class="col"  >
+        <div class="card" >
+          <img src="{% static '005.webp' %}" class="card-img-top" alt="..." id="cd">
+          <div class="card-body"><h5>Training And Placement</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <a href="{% url 'jobseeker'%}">for more info</a>
+        </div>
+      </div>
+      <div class="col"  >
+        <div class="card" >
+          <img src="{% static '003.webp' %}" class="card-img-top" alt="..." id="cd">
+          <div class="card-body">
+            <h5 class="card-title">Internship</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <a href="{% url 'jobseeker'%}">for more info</a>
+        </div>
+      </div>
+      <div class="col" id="card">
+        <div class="card" >
+          <img src="{% static '004.webp' %}" class="card-img-top" alt="..." id="cd" >
+          <div class="card-body">
+            <h5 class="card-title">Job References</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+          <a href="{% url 'jobseeker'%}">for more info</a>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

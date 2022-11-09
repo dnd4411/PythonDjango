@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+ {% load static %}
+  {% block content %}
+
+{{m}}
+
+<form action="{% url 'conf_pw' %}" method="post">
+  {% csrf_token %}
+  <h3>Create new password</h3>
+  <label><b>Password </b> </label>
+  <input type="text" name="Pw" id="Pass" placeholder="new password" />
+
+  <br /><br />
+  <input type="submit" name="log" id="log" value="submit" />
+  <br /><br />
+</form>
+
+{% endblock %}

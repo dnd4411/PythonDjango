@@ -1,0 +1,24 @@
+{% extends 'index.html' %} {% load static %} {% block content %}
+
+<form action="{% url 'reset' %}" method="post">
+  {% csrf_token %}
+
+  <div class="input-group mb-3">
+    <h2>Verify Your Email</h2>
+    <span class="input-group-text" id="basic-addon1">Email</span>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="enter your email"
+      aria-label="email"
+      aria-describedby="basic-addon1"
+      name="mail"
+    />
+
+    <br />
+    <br />
+    <button type="submit">verify</button>
+  </div>
+</form>
+
+{% endblock %}

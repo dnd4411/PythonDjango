@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>job</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+  </head>
+  <body >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a href="{% url 'home'%}" class="navbar-brand"><h1>Jobseeker</h1></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <!-- <========================Technologies=====================================> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Technologies
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">Python</a></li>
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">Java</a></li>
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">PHP</a></li>
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">React.js</a></li>
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">aws</a></li>
+              </ul>
+            </li>
+            <!-- <========================Job Opportunities=====================================> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Job Opportunities
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">Fresher</a></li>
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">Internship</a></li>
+                <li><a class="dropdown-item" href="{% url 'jobseeker'%}">Internship With Placement</a></li>
+              </ul>
+            </li>
+            <!-- <======================== CONTACT =====================================> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Contact Us
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <p>
+                  #301, PlotNo:80/A, Srinivasam Apartment, Road No:4, Opp. Amma
+                  Womens PG, Addagutta Society, Pragathi Nagar Road, KPHB,
+                  Hyderabad, Telengana-500072
+                </p>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div><h5 class="me-5">For Employers</h5></div>
+        <h3>|</h3>
+        <div><h5 class="me-5">Help</h5></div>
+        <h3>|</h3>
+        <div>
+          <a href="/signup/login/"class="me-5"><h5>sign in</h5></a>
+        </div>
+         <div>
+          <a href="/signup/logout/" class="me-5"><h5>Log out</h5></a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="content">{% block content %} {% endblock %}</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

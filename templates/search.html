@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %} Search Results {% endblock title %}
+
+
+
+{% block content %}
+<div>
+    <!-- <====================Search=========================================> -->
+    <div class="container" >
+        <form method="get" action="/search" class="form-inline m-5">
+          <div class="input-group m-3">
+              <input type="text" name="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Saerch</button>
+              </div>
+            </div>
+        </form>
+      </div>
+
+<div class="container my-3">
+    <h2>Search results : </h2>
+    {% if allPosts|length < 1 %}
+   <p>No search results</p>
+    Your search query : <b>{{query}}</b> did not match any documents. <br>
+    Suggestions:
+    <ul>
+    <li>Make sure that all words are spelled correctly.</li>
+    <li>Try more general keywords.</li>
+   <li> Try fewer keywords.</li>
+   <li> Try different keywords.</li>
+    </li>
+    </ul>
+
+
+    {% endif %}
+    {% for post in allPosts  %}
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Article  by {{post.python}}</strong>
+            <h3 class="mb-0">{{post.java}}</h3>
+            <h3 class="mb-0">{{post.php}}</h3>
+            <h3 class="mb-0">{{post.React_js}}</h3>
+            <h3 class="mb-0">{{post.internship}}</h3>
+            <h3 class="mb-0">{{post.Placement}}</h3>
+            <h3 class="mb-0">{{post.Fresher}}</h3>
+           
+          
+            
+        </div>
+       
+        </div>
+
+        {% endfor %}
+    </div>
+    <h1>{{s}}</h1>
+</div>
+ {% endblock %}
